@@ -1,0 +1,27 @@
+// 2. **Transform API response to object (id → name)**
+//     - Input:
+        
+//         ```jsx
+//         [
+//           { id: 1, name: "Alice" },
+//           { id: 2, name: "Bob" }
+//         ]
+//         ```
+        
+//     - Output:
+        
+//         ```jsx
+//         { 1: "Alice", 2: "Bob" }
+//         ```
+
+const user = [
+  { id: 1, name: "Alice" },
+  { id: 2, name: "Bob" },
+];
+
+const userDetails={};
+
+user.forEach(person=>{
+    userDetails[person.id] = person.name;
+})
+console.log(userDetails)
