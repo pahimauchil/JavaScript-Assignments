@@ -22,3 +22,9 @@ const orders = [
   { id: 3, category: "electronics", price: 200 },
 ];
 
+const revenuePerCat = orders.reduce((acc,order)=>{
+    acc[order.category] = (acc[order.category]|| 0)+order.price;
+    return acc;
+},{});
+
+console.log(revenuePerCat);
