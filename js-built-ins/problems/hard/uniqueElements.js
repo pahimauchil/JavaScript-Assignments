@@ -19,7 +19,13 @@
 */
 
 function getUniqueElements(arr) {
-  // Your code here
+  const removeDupli=[];
+  for(let i=0;i<arr.length;i++){
+    if(!removeDupli.includes(arr[i]))
+    removeDupli.push(arr[i]);
+  }
+  return removeDupli;
 }
+
 
 module.exports = getUniqueElements;

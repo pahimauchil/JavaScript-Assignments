@@ -16,3 +16,22 @@
 //           hello: { en: "Hello", fr: "Bonjour", es: "Hola" },
 //           bye: { en: "Goodbye", fr: "Au revoir" }
 //         ```
+
+
+const obj = {
+           en: { hello: "Hello", bye: "Goodbye" },
+           fr: { hello: "Bonjour", bye: "Au revoir" },
+           es: { hello: "Hola" }
+         }
+
+const res ={};
+
+for(let lang in obj){
+    for(let word in obj[lang]){
+        if(!res[word]){
+            res[word]={};
+        }
+        res[word][lang]=obj[lang][word];
+    }
+}
+console.log(res);

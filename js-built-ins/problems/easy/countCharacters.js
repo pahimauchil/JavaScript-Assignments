@@ -20,16 +20,15 @@
 */
 
 const countCharacters = (statement) => {
-  let result = {};
-  for (let i = 0; i < statement.length; i++) {
-    let char = statement.charAt(i);
-    if (result[char]) {
-      result[char]++;
-    } else {
-      result[char] = 1;
+  const output={};
+  for(let i=0;i<statement.length;i++){
+    const char = statement.charAt(i);
+    if(output[char]){
+      output[char]++;
+    }else{
+      output[char]=1
     }
-  }
-  return result;
+  }return output;
 };
 module.exports = countCharacters;
 
